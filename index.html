@@ -90,14 +90,6 @@
       padding-top: 120px;
     }
 
-    .hero-label {
-      font-size: 0.85rem;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
     .hero-heading {
       font-size: clamp(2.4rem, 6vw, 4rem);
       font-weight: 700;
@@ -165,6 +157,22 @@
       background: #222;
       color: var(--text-muted);
       border: 1px solid var(--border);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .project-links a {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .project-links a:hover {
+      color: var(--text);
     }
 
     /* ABOUT */
@@ -246,9 +254,8 @@
   </nav>
 
   <section id="hero">
-    <p class="hero-label">Portfolio</p>
     <h1 class="hero-heading">Hi, I'm Vishal.</h1>
-    <p class="hero-tagline">I build software and solutions. Lately I've been spending a lot of time with AI agents, Python, and APIs.</p>
+    <p class="hero-tagline">Lately I've been deep in AI agents, Python, and APIs — building things that actually work in production.</p>
   </section>
 
   <section id="projects">
@@ -263,6 +270,10 @@
           <span class="tag">Node.js</span>
           <span class="tag">PostgreSQL</span>
         </div>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub &nearr;</a>
+          <a href="#" target="_blank" rel="noopener">Live &nearr;</a>
+        </div>
       </div>
 
       <div class="project-card">
@@ -272,6 +283,9 @@
           <span class="tag">Python</span>
           <span class="tag">CLI</span>
           <span class="tag">REST APIs</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub &nearr;</a>
         </div>
       </div>
 
@@ -283,6 +297,10 @@
           <span class="tag">Canvas API</span>
           <span class="tag">Open Source</span>
         </div>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub &nearr;</a>
+          <a href="#" target="_blank" rel="noopener">Live &nearr;</a>
+        </div>
       </div>
 
     </div>
@@ -290,7 +308,7 @@
 
   <section id="about">
     <p class="section-title">About</p>
-    <p>I'm a product owner and solution engineer with 6+ years designing, developing, and deploying software — from real-time data pipelines and LLM agents to enterprise SaaS platforms. I hold a BS in Mechanical Engineering and a CS minor from UT Austin, and I thrive at the intersection of technical execution and product strategy.</p>
+    <p>I'm an engineer and product person. I studied mechanical engineering at UT Austin but ended up spending most of my career writing software — data pipelines, LLM agents, internal tooling. I like working close to both the code and the problem it's solving.</p>
     <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">View résumé &rarr;</a>
   </section>
 
