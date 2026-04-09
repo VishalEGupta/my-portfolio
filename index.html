@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Gupta</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f0f0f;
+      --bg-card: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e8e8e8;
+      --text-muted: #888;
+      --accent: #7c6af7;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      background: rgba(15, 15, 15, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-name {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 100px 24px;
+    }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 120px;
+    }
+
+    .hero-label {
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-heading {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+
+    /* SECTION HEADINGS */
+    .section-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 40px;
+    }
+
+    /* PROJECTS */
+    .project-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 32px;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: #444;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: #222;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    /* ABOUT */
+    #about p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+
+    /* RESUME LINK */
+    .resume-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: var(--accent);
+      transition: opacity 0.2s;
+    }
+
+    .resume-link:hover {
+      opacity: 0.75;
+    }
+
+    /* CONTACT */
+    #contact p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+
+    .contact-email:hover {
+      border-color: var(--accent);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      nav {
+        padding: 16px 20px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-name">Vishal Gupta</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <p class="hero-label">Portfolio</p>
+    <h1 class="hero-heading">Hi, I'm Vishal.</h1>
+    <p class="hero-tagline">Product owner and solution engineer with 6+ years building data-driven applications, leading cross-functional teams, and shipping software that moves the needle.</p>
+  </section>
+
+  <section id="projects">
+    <p class="section-title">Projects</p>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3 class="project-title">Project Alpha</h3>
+        <p class="project-desc">A full-stack web application for managing tasks and workflows, with real-time collaboration and a clean dashboard interface.</p>
+        <div class="tag-list">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Project Beta</h3>
+        <p class="project-desc">A CLI tool that automates repetitive development tasks, integrates with common APIs, and outputs structured reports.</p>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">CLI</span>
+          <span class="tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Project Gamma</h3>
+        <p class="project-desc">An open-source data visualization library with a composable API, built for rendering large datasets in the browser efficiently.</p>
+        <div class="tag-list">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Canvas API</span>
+          <span class="tag">Open Source</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section-title">About</p>
+    <p>I'm a product owner and solution engineer with 6+ years designing, developing, and deploying software — from real-time data pipelines and LLM agents to enterprise SaaS platforms. I hold a BS in Mechanical Engineering and a CS minor from UT Austin, and I thrive at the intersection of technical execution and product strategy.</p>
+    <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">View résumé &rarr;</a>
+  </section>
+
+  <section id="contact">
+    <p class="section-title">Contact</p>
+    <p>Have a project in mind or just want to talk? Reach out.</p>
+    <a class="contact-email" href="mailto:vishal.e.gupta@gmail.com">vishal.e.gupta@gmail.com</a>
+  </section>
+
+  <footer>
+    &copy; 2026 Vishal Gupta
+  </footer>
+
+</body>
+</html>
