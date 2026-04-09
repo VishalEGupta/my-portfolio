@@ -254,15 +254,51 @@
     /* RESPONSIVE */
     @media (max-width: 600px) {
       nav {
-        padding: 16px 20px;
+        padding: 14px 20px;
       }
 
+      /* Hide text nav links on mobile — single-scroll page, icons stay */
       .nav-links {
-        gap: 20px;
+        display: none;
+      }
+
+      .nav-icons {
+        margin-left: 0;
       }
 
       section {
-        padding: 80px 20px;
+        padding: 72px 20px;
+      }
+
+      #hero {
+        min-height: 50vh;
+        padding-top: 100px;
+      }
+
+      .hero-heading {
+        font-size: 2.2rem;
+      }
+
+      .hero-tagline {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+
+      .project-card {
+        padding: 20px 20px;
+      }
+
+      #about p {
+        max-width: 100%;
+        font-size: 1rem;
+      }
+
+      #contact p {
+        font-size: 0.95rem;
+      }
+
+      .contact-email {
+        font-size: 1rem;
       }
     }
   </style>
